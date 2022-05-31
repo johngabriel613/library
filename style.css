@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -187,6 +188,7 @@ section{
 .recent h1{
     font-size: 3rem;
     color: var(--text-color);
+    margin-bottom: 20px;
 }
 
 .wrapper{
@@ -197,19 +199,39 @@ section{
 }
 
 .card{
-    padding-bottom: 10px;
-    background-color:#f3e5d0 ;
+    padding: 10px;
+    background-color:#fff ;
     width: 100%;
     max-width: 120px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2)
+
+}
+
+.card p, .card span{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card span{
+    font-size: .8rem;
+    color: #727272;
+    font-style: italic;
 }
 
 .card img{
     width: 100%;
     max-width: 120px;
+    margin-bottom: 10px;
+    border-radius: 3px;
 }
 
 @media only screen and (max-width: 750px){
@@ -252,7 +274,7 @@ section{
         flex-direction: column;
     }
 
-    .home-text h1{
+    .home-text h1, .recent h1{
         font-size: 2rem;
     }
     
