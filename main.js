@@ -8,3 +8,18 @@ window.addEventListener('scroll', () => {
         header.classList.remove('sticky')
     }
 })
+
+
+//Navigation
+const openMenu = document.querySelector('.openMenu')
+const closeMenu = document.querySelector('.closeMenu')
+const nav = document.querySelector('nav')
+
+openMenu.addEventListener('click', () => {
+    nav.classList.add('opened')
+})
+
+closeMenu.addEventListener('click', () => {
+    nav.classList.remove('opened')
+})
+
